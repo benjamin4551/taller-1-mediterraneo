@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reporte de Ventas - Mediterráneo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f8f9fa; }
+    .report-card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 1.5rem; margin-bottom: 1rem; }
+    .periodo-header { background: #e9ecef; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+    .order-list { max-height: 300px; overflow-y: auto; }
+    .order-item { border-bottom: 1px solid #dee2e6; padding: 0.5rem 0; }
+    .detail-section { background: #f8f9fa; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Mediterráneo</a>
+      <span class="navbar-text">https://www.mediterraneo.cl/registro-venta</span>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <!-- Estado sin ventas -->
+    <div class="report-card">
+      <div class="periodo-header">
+        <h5 class="mb-0">Periodo: 16/09/2025-30/09/2025</h5>
+      </div>
+      <p class="text-center mb-3">no hay ventas registradas en este periodo</p>
+      <div class="text-center">
+        <button class="btn btn-primary">OK</button>
+      </div>
+    </div>
+
+    <!-- Estado con ventas -->
+    <div class="report-card">
+      <div class="periodo-header">
+        <h5 class="mb-0">Periodo: 01/08/2025 - 15/09/2025</h5>
+      </div>
+      
+      <div class="order-list">
+        <div class="order-item">15/08/2025 - Número de pedido: 213 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">15/08/2025 - Número de pedido: 212 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">15/08/2025 - Número de pedido: 211 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">15/08/2025 - Número de pedido: 210 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">15/08/2025 - Número de pedido: 208 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">14/08/2025 - Número de pedido: 153 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">14/08/2025 - Número de pedido: 151 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">14/08/2025 - Número de pedido: 160 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">14/08/2025 - Número de pedido: 243 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">13/08/2025 - Número de pedido: 210 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">13/08/2025 - Número de pedido: 125 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">13/08/2025 - Número de pedido: 124 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">13/08/2025 - Número de pedido: 254 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">13/08/2025 - Número de pedido: 123 <span class="float-end text-primary">Detalle</span></div>
+        <div class="order-item">13/08/2025 - Número de pedido: 234 <span class="float-end text-primary">Detalle</span></div>
+      </div>
+    </div>
+
+    <!-- Detalle de pedido -->
+    <div class="report-card">
+      <h5 class="mb-3">Reporte detallado: 13/09/2025 // Num_pedido: 234</h5>
+      
+      <div class="detail-section">
+        <p><strong>Cliente:</strong> Ana Lusa Compete Mediterraneo</p>
+        
+        <p><strong>Producto:</strong></p>
+        <ul>
+          <li>Quazancho: 2</li>
+          <li>Padilla: 2</li>
+        </ul>
+        
+        <p><strong>Monto:</strong> $110.000</p>
+        <p><strong>Dirección de envío:</strong> Av. cumplido 1234</p>
+        <p><strong>Fecha del pedido:</strong> 13/09/2025</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

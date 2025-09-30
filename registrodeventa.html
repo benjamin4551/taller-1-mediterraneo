@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mediterráneo - Ventas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f8f9fa; }
+    .order-card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 1.5rem; margin-bottom: 1rem; }
+    .product-item { border-bottom: 1px solid #dee2e6; padding: 1rem 0; }
+    .total-price { background: #e9ecef; padding: 1rem; border-radius: 8px; font-weight: bold; margin-top: 1rem; }
+    .pending-order { background: #fff3cd; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .register-section { background: #d1ecf1; border-radius: 8px; padding: 1.5rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <h4 class="mb-0">Plato bajo</h4>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <div class="order-card">
+      <div class="product-item">
+        <h5>Paella Valenciana</h5>
+        <div class="d-flex justify-content-between">
+          <span>Cantidad: 2</span>
+          <span>Precio: $30,000</span>
+        </div>
+      </div>
+      
+      <div class="product-item">
+        <h5>Moussaka griega</h5>
+        <div class="d-flex justify-content-between">
+          <span>Cantidad: 4</span>
+          <span>Precio: $40,000</span>
+        </div>
+      </div>
+      
+      <div class="pending-order">
+        <h6>Pedido pendiente</h6>
+        <div class="product-item">
+          <div class="d-flex justify-content-between">
+            <span>IMS Gazpacho - Cantidad: 4</span>
+            <span>Precio: $120,000</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="total-price text-center">
+        Precio Total: $70,000
+      </div>
+    </div>
+
+    <div class="register-section">
+      <h5 class="mb-3">Registrar venta</h5>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#saleModal">
+        Registrar venta
+      </button>
+    </div>
+  </main>
+
+  <!-- Modal de registro de venta -->
+  <div class="modal fade" id="saleModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-4">
+          <h5>Registro venta</h5>
+          <p id="saleMessage">Venta registrada exitosamente</p>
+          <button class="btn btn-success" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Simular diferentes respuestas al registrar venta
+    document.querySelector('.btn-primary').addEventListener('click', function() {
+      const messages = [
+        "Venta registrada exitosamente",
+        "Esc 1 - Registro venta - Rego pendiente, no se puede registar la venta",
+        "Esc 2 - Registro venta - Rego pendiente, no se puede registar la venta"
+      ];
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('saleMessage').textContent = randomMessage;
+    });
+  </script>
+</body>
+</html>
